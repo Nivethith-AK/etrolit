@@ -1,0 +1,67 @@
+/* Performance Optimizations */
+
+/* Prevent layout shift for images */
+img, svg, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Smooth scrolling and animations */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Optimize buttons and interactive elements */
+button, a, input, select, textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button, a {
+  touch-action: manipulation;
+}
+
+/* Prevent jank during scroll */
+.container {
+  will-change: auto;
+}
+
+/* Image loading optimization */
+img[loading="lazy"] {
+  background-color: transparent;
+}
+
+/* Optimize text rendering */
+h1, h2, h3, h4, h5, h6 {
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Fast blur animations */
+.backdrop-blur-xl, .backdrop-blur-lg, .backdrop-blur-md {
+  will-change: backdrop-filter;
+}
+
+/* Form input optimization */
+input, textarea, select {
+  font-size: 16px; /* Prevent zoom on iOS */
+}
+
+/* Contain Layout */
+.max-w-7xl, .max-w-6xl, .max-w-5xl {
+  contain: layout style paint;
+}
