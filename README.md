@@ -24,7 +24,6 @@ Etrolit is a marketing site and demo hub for an AI engineering agency. The homep
 
 ![Etrolit homepage preview](public/readme-homepage.png)
 
-Replace `public/readme-homepage.png` with your screenshot to update this preview.
 
 ## Tech Stack
 
