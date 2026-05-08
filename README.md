@@ -1,49 +1,47 @@
-# NovaStack AI
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+</div>
 
-A polished, product-first landing page for NovaStack AI. The site presents a dark, technical visual system with neon accents, strong section hierarchy, and a premium SaaS feel designed to read well on GitHub and in the browser.
+# Etrolit — AI Engineering Agency
 
-[![Next.js](https://img.shields.io/badge/Next.js-16.0.10-black?logo=nextdotjs)](https://nextjs.org/)
-[![React](https://img.shields.io/badge/React-19.2.0-61dafb?logo=react&logoColor=white)](https://react.dev/)
+A polished, product-focused landing site and demo hub for Etrolit — an AI engineering agency. The site presents a modern, technical visual system with clear section hierarchy and conversion-focused copy designed to read well on GitHub and in the browser.
+
+[![Vite](https://img.shields.io/badge/Vite-6.x-646cff?logo=vite)](https://vitejs.dev/)
+[![React](https://img.shields.io/badge/React-19.x-61dafb?logo=react&logoColor=white)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178c6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-v4-38bdf8?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
-[![Radix UI](https://img.shields.io/badge/Radix%20UI-Accessible-161618)](https://www.radix-ui.com/)
-[![Vercel](https://img.shields.io/badge/Deployed%20with-Vercel-black?logo=vercel)](https://vercel.com/)
 
 ## Overview
 
-NovaStack AI is a landing page built with the Next.js App Router. The homepage flows through navigation, a bold hero, feature storytelling, a step-by-step product explanation, infrastructure proof, metrics, integrations, security, developer messaging, and a final conversion section.
+Etrolit is a marketing site and demo hub for an AI engineering agency. The homepage includes navigation, a hero with clear positioning, feature storytelling, a product workflow, integrations and security messaging, developer-focused content, and a conversion CTA.
 
 ## Features
 
-- Strong hero section with clear product positioning
-- Feature cards that communicate value quickly
-- Step-by-step product workflow section
-- Infrastructure and performance messaging
-- Metrics block for trust and credibility
-- Integrations and security sections for enterprise buyers
-- Developer-focused section and final CTA
-- Responsive layout tuned for desktop and mobile
+- Clear hero with product positioning and primary CTA
+- Feature cards that surface core services and outcomes
+- Demonstration `AIChatbot` component for GenAI workflows
+- Infrastructure and privacy/security messaging
+- Responsive layout optimized for desktop and mobile
+- Static host-ready build in `hostinger/` for simple deployments
 
 ## Homepage Preview
 
-![NovaStack AI homepage preview](public/readme-homepage.png)
+![Etrolit homepage preview](public/readme-homepage.png)
 
-The image above is a full-page screenshot captured from the current production build.
+Replace `public/readme-homepage.png` with your screenshot to update this preview.
 
 ## Tech Stack
 
-- Next.js 16
-- React 19
-- TypeScript
-- Tailwind CSS v4
-- Radix UI primitives
+- Vite (dev server + build)
+- React 19 + TypeScript
+- Tailwind CSS (PostCSS + Autoprefixer)
 - Lucide React icons
-- React Hook Form and Zod
-- Vercel Analytics
+- React Router (client routing)
+- `@google/genai` (demo integrations)
 
 ## Getting Started
 
-Install dependencies:
+Install dependencies (using your preferred package manager):
 
 ```bash
 pnpm install
@@ -61,84 +59,63 @@ Build for production:
 pnpm build
 ```
 
-Start the production server:
+Preview the production build locally:
 
 ```bash
-pnpm start
-```
-
-Run linting:
-
-```bash
-pnpm lint
+pnpm preview
 ```
 
 ## Project Structure
 
-- `app/` - App Router pages, root layout, and global styles
-- `components/landing/` - Homepage sections and marketing visuals
-- `components/ui/` - Shared UI primitives
-- `hooks/` - Shared React hooks
-- `lib/` - Utility helpers
-- `public/` - Static assets and screenshots
-- `styles/` - Global stylesheet source
+- `index.html` - Vite entry
+- `index.tsx` / `App.tsx` - application bootstrap and routing
+- `pages/` - page-level views (Home, Services, Contact, etc.)
+- `components/` - UI components and landing sections (`AIChatbot.tsx`, `Layout.tsx`, `Footer.tsx`)
+- `public/` - static assets and images (place `readme-homepage.png` here)
+- `hostinger/` - static host-ready build and styles
 
 ## Customization Guide
 
-If you want to rebrand NovaStack AI, start here:
+- Update metadata, fonts, and app shell in `index.html` and `index.tsx`.
+- Edit page composition in `pages/HomePage.tsx` and other `pages/` files to change section order.
+- Modify global styles in `public/index.css` or `hostinger/style.css`.
+- Update the demo chatbot behavior in `components/AIChatbot.tsx` (ensure API keys are stored in environment variables).
 
-- `app/layout.tsx` - metadata, fonts, and app shell
-- `app/page.tsx` - homepage section order
-- `app/globals.css` - design tokens and color system
-- `components/landing/navigation.tsx` - navigation and brand identity
-- `components/landing/hero-section.tsx` - hero copy and primary CTA
-- `components/landing/features-section.tsx` - product value cards
-- `components/landing/how-it-works-section.tsx` - workflow explanation
-- `components/landing/infrastructure-section.tsx` - infrastructure messaging
-- `components/landing/metrics-section.tsx` - proof points and numbers
-- `components/landing/integrations-section.tsx` - integrations content
-- `components/landing/security-section.tsx` - trust and security content
-- `components/landing/developers-section.tsx` - developer-focused messaging
-- `components/landing/cta-section.tsx` - final conversion block
-- `components/landing/footer-section.tsx` - footer links and closing copy
-- `public/` - screenshots, icons, and any future marketing images
+## Notes
 
-## Content Notes
-
-- The site is currently branded as NovaStack AI.
-- The screenshot in `public/readme-homepage.png` was captured from a production build on localhost.
-- The layout is already sectioned for easy copy, visual, and branding updates.
-- Most future changes should stay inside the landing section components rather than the page shell.
+- The repository is set up for local development with Vite and client-side routing.
+- Keep secrets (API keys) in environment variables — do not commit them.
+- To show the README preview, add `public/readme-homepage.png` (a production screenshot).
 
 ## Suggested Improvements
 
-If you want to take the README even further, add any of the following:
-
-- A deployment section for Vercel or another host
-- Brand color tokens with hex values
-- A short edit guide for content owners
-- A live demo link once the site is deployed
+- Add a deployment section (Vercel/Netlify) with one-click deploy settings.
+- Provide brand tokens and a small style guide for color/typography.
+- Add a short content-editing guide for non-technical editors.
 
 ## License
 
-This project is ready to use as a custom landing page template. Add your preferred license before publishing publicly.
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+Add your preferred license before publishing.
 
-# Run and deploy your AI Studio app
+## Deployment
 
-This contains everything you need to run your app locally.
+Recommended quick deploy options:
 
-View your app in AI Studio: https://ai.studio/apps/drive/1ZIPP3HsJ-0_iTF4K553wXOSjXZA70qq8
+- Vercel (recommended):
+	1. Import the repository at https://vercel.com/new
+	2. Set the build command to `pnpm build` and the output directory to `dist` (or leave defaults for Vite)
+	3. Add environment variables (e.g. API keys) in the Vercel dashboard and deploy.
 
-## Run Locally
+- Netlify:
+	1. Create a new site and connect the repository.
+	2. Set the build command to `pnpm build` and the publish directory to `dist`.
+	3. Add environment variables in Netlify site settings and deploy.
 
-**Prerequisites:**  Node.js
+Notes:
 
+- If you use another host, ensure the build step runs `pnpm build` and serves the `dist` output.
+- Keep secret keys out of the repo; use host environment variables.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## License
+
+This project is licensed under the MIT License — see the `LICENSE` file for details.
